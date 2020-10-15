@@ -1,6 +1,0 @@
-development:
-  password: b3f81a3fd3323c584aae3db2c7d5717e
-  theme_id: 39256227911
-  store: parcel-themekit.myshopify.com
-  ignore_files:
-    - config/settings_data.json # So you don't overwrite theme settings made from the Shopify Admin

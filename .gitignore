@@ -1,7 +1,7 @@
-.cache/
-node_modules/
+node_modules
 package.lock
-./config.yml
+config.yaml
+yarn.lock
 
 assets/bundle.min.js
 assets/bundle.min.map
