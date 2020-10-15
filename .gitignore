@@ -1,6 +1,6 @@
 node_modules
 package.lock
-config.yaml
+config.yml
 yarn.lock
 
 assets/bundle.min.js
