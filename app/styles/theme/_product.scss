@@ -1,0 +1,12 @@
+.foo-product {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-end;
+  background: grey;
+  transform: scale(0.5);
+
+  .bar-product {
+    content: "hey look a nested rule";
+  }
+}

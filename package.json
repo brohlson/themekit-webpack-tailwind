@@ -1,0 +1,37 @@
+{
+  "name": "themekit-webpack-tailwind",
+  "version": "1.0.0",
+  "description": "Shopify Themekit with Webpack & Tailwind CSS",
+  "author": "Chase Ohlson",
+  "license": "MIT",
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "jquery": "^3.5.1"
+  },
+  "scripts": {
+    "dev": "concurrently \"yarn watch:code\" \"yarn watch:shopify\"",
+    "watch:shopify": "theme watch --allow-live",
+    "watch:code": "webpack --watch --config webpack.config.js",
+    "build": "cross-env NODE_ENV=production webpack --progress --optimize-minimize --config webpack.config.js",
+    "clean": "rm -rf ./node_modules",
+    "deploy": "yarn && yarn build && yarn clean && theme deploy --allow-live"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.0",
+    "@babel/preset-env": "^7.12.0",
+    "autoprefixer": "9.8.6",
+    "babel-loader": "^8.1.0",
+    "cross-env": "^7.0.2",
+    "css-loader": "^5.0.0",
+    "cssnano": "^4.1.10",
+    "file-loader": "^6.1.1",
+    "mini-css-extract-plugin": "^1.0.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.4",
+    "postcss-loader": "^4.0.4",
+    "sass": "^1.27.0",
+    "sass-loader": "^10.0.3",
+    "terser-webpack-plugin": "^5.0.0",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2"
+  }
+}
