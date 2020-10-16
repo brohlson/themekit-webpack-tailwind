@@ -6,13 +6,14 @@
   "license": "MIT",
   "dependencies": {
     "babel-polyfill": "^6.26.0",
-    "jquery": "^3.5.1"
+    "jquery": "^3.5.1",
+    "tailwindcss": "^1.9.2"
   },
   "scripts": {
     "dev": "concurrently \"yarn watch:code\" \"yarn watch:shopify\"",
     "watch:shopify": "theme watch --allow-live",
-    "watch:code": "webpack --watch --config webpack.config.js",
-    "build": "cross-env NODE_ENV=production webpack --progress --optimize-minimize --config webpack.config.js",
+    "watch:code": "webpack --watch --mode=development --config webpack.config.js",
+    "build": "NODE_ENV=production webpack --mode=production --progress --optimize-minimize --config webpack.config.js",
     "clean": "rm -rf ./node_modules",
     "deploy": "yarn && yarn build && yarn clean && theme deploy --allow-live"
   },
@@ -22,7 +23,7 @@
     "autoprefixer": "9.8.6",
     "babel-loader": "^8.1.0",
     "cross-env": "^7.0.2",
-    "css-loader": "^5.0.0",
+    "css-loader": "^4.3.0",
     "cssnano": "^4.1.10",
     "file-loader": "^6.1.1",
     "mini-css-extract-plugin": "^1.0.0",
@@ -30,7 +31,9 @@
     "postcss-loader": "^4.0.4",
     "sass": "^1.27.0",
     "sass-loader": "^10.0.3",
-    "terser-webpack-plugin": "^5.0.0",
+    "stylelint": "^13.7.2",
+    "stylelint-config-standard": "^20.0.0",
+    "terser-webpack-plugin": "^4.2.3",
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.2"
   }

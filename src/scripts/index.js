@@ -10,6 +10,6 @@ import "../styles/index.scss";
 import search from "./modules/search";
 
 $(function () {
+  console.log("Hi there.");
   search.init();
-  console.log("eggs");
 });
